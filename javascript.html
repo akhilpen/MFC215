@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Javascript Web Page </title>
+    <style>
+        table, td, th {
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        table {
+            width: 25%;
+        }
+        
+        .right{
+        float: right;
+        font-size: 25px;
+        }
+        .center{
+        position:absolute;
+        left:40%;
+        top:20%;
+        width:100%;
+        font-size:20px;
+        }
+    </style>
+</head>
+<body>
+<div class = "right">
+<p id = "date" > </p>
+<script>
+    var d = new Date();
+    var month = d.getMonth()+1;
+    var day = d.getDate();
+    var year = d.getFullYear();
+    document.getElementById("date").innerHTML =  ("Date: " + month + " / " +day + " / " + year)
+</script>
+
+<p id = "time"> </p>
+<script>
+    var d = new Date();
+    var hours = d.getHours();
+    var minutes = d.getMinutes();
+    var seconds = d.getSeconds();
+    document.getElementById("time").innerHTML =  ("Time: " + hours + ":" + minutes)
+</script>
+</div>
+<div class="center">
+<p id = "due"> </p>
+<script>
+    var duedate = 12;
+    var d = new Date();
+    var day = d.getDate();
+
+    if(duedate > day){
+        document.getElementById("due").innerHTML =  ("This assignment is due in " + (duedate - day) + " days")
+    }
+    else
+    {
+        document.getElementById("due").innerHTML =  ("This assignment was due " + (duedate - day) + " days back")
+    }
+
+</script>
+
+<script>
+    var i;
+    var days;
+    var monthnumber;
+    var color;
+    var month;
+    var months = Array("January","February","March","April","May","June","July","August","September","October","November","December");
+    var daysinmonth = Array("31","28","31","30","31","30","31","31","30","31","30","31");
+    document.write("<table >");
+    document.write("<tr><th>Month Number</th><th>Month Name</th><th>Days in Month</th></tr>");
+    for (i = 0; i < 12; i++){
+        if( i % 2 == 0){
+            color = "#D3D3D3";
+        }
+        else{
+            color = "";
+        }
+        month = months[i];
+        days = daysinmonth[i];
+        monthnumber = i + 1;
+        document.write("<tr style=\"background-color: " + color + "\"><td>" + monthnumber + "</td><td>" + month + "</td><td>" + days + "</td></tr>");
+    }
+    document.write("</table>");
+</script>
+
+<br>
+<a href = "index.html"> Home Page </a>
+</div>
+
+
+</body>
+</html>

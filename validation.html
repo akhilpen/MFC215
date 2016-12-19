@@ -1,0 +1,197 @@
+
+<!doctype html>
+<html >
+<head>
+<style>
+
+.right{
+        float: right;
+        font-size: 25px;
+        }
+        
+  .form{
+  position: absolute;
+  left:30%;
+  top:20%;
+  }  
+  i {											
+			font-weight: bold;
+			color: red;
+		}    
+
+</style>
+<title> Form Page </title>
+
+<body>
+
+<div class = "right">
+<p id = "date" > </p>
+
+
+<p id = "time"> </p>
+<script>
+    var d = new Date();
+    var month = d.getMonth()+1;
+    var day = d.getDate();
+    var year = d.getFullYear();
+    document.getElementById("date").innerHTML =  ("Date: " + month + " / " +day + " / " + year)
+
+    var hours = d.getHours();
+    var minutes = d.getMinutes();
+    var seconds = d.getSeconds();
+    document.getElementById("time").innerHTML =  ("Time: " + hours + ":" + minutes)
+</script>
+
+</div>
+
+<div style="position:absolute;left:30%;">
+
+		<p>
+			Select the background color:
+		</p>
+	
+		<input type="radio" name="bgColor"  onclick="bgChange('orange')">Orange 
+		<input type="radio" name="bgColor" onclick="bgChange('green')">Green
+		<input type="radio"  name="bgColor" onclick="bgChange('blue')">Blue
+		<input type="radio" name="bgColor" onclick="bgChange('yellow')">Yellow
+	
+		<p>
+			Select the text color:
+		</p>
+	
+		<input type="radio" name="textColor" onclick="textChange('white')">White
+		<input type="radio" name="textColor" onclick="textChange('red')">Red
+		<input type="radio" name="textColor" onclick="textChange('pink')">Pink
+		<input type="radio" name="textColor" onclick="textChange('brown')">Brown
+	</div>
+<div class = "form">
+<p>Enter Your Details Below <p>
+<p>All fields with <i>*</i> must be filled.</p>
+
+<form  method="post" action="mailto:saiakhil@buffalo.edu" onsubmit="return validation()">
+
+	<label for="firstName">First Name:  </label><br> <input type="text"  id="firstName" name="firstname" placeholder="First Name"><i>*</i>
+	<br><br><label for="lastName">Last Name:  </label><br><input type="text" id="lastName" name="lastname" placeholder="Last Name"><i>*</i>
+	<br><br><label for="address">Address:  </label><br> <input type="text" id="address" name="address" placeholder="Address">
+	<br><br><label for="city">City:  </label><br><input type="text" id="city" name="city" placeholder="City">
+	<br><br><label for="stateSelect">State:  </label><br><select name="state" id="stateSelect">
+	<option >select state</option>
+		<option value="AL">AL-Alabama</option>
+		<option value="AK">AK - Alaska</option>
+		<option value="AZ">AZ - Arizona</option>
+		<option value="AR">AR - Arkansas</option>
+		<option value="CA">CA - California</option>
+		<option value="CO">CO - Colorado</option>
+		<option value="CT">CT - Connecticut</option>
+		<option value="DE">DE - Delaware</option>
+		<option value="DC">DC - District of Columbia</option>
+		<option value="FL">FL - Florida</option>
+		<option value="GA">GA - Georgia</option>
+		<option value="HI">HI - Hawaii</option>
+		<option value="ID">ID - Idaho</option>
+		<option value="IL">IL - Illinois</option>
+		<option value="IN">IN - Indiana</option>
+		<option value="IA">IA - Iowa</option>
+		<option value="KS">KS - Kansas</option>
+		<option value="KY">KY - Kentucky</option>
+		<option value="LA">LA - Louisiana</option>
+		<option value="ME">ME - Maine</option>
+		<option value="MD">MD - Maryland</option>
+		<option value="MA">MA - Massachusetts</option>
+		<option value="MI">MI - Michigan</option>
+		<option value="MN">MN - Minnesota</option>
+		<option value="MS">MS - Mississippi</option>
+		<option value="MO">MO - Missouri</option>
+		<option value="MT">MT - Montana</option>
+		<option value="NE">NE - Nebraska</option>
+		<option value="NV">NV - Nevada</option>
+		<option value="NH">NH - New Hampshire</option>
+		<option value="NJ">NJ - New Jersey</option>
+		<option value="NM">NM - New Mexico</option>
+		<option value="NY">NY - New York</option>
+		<option value="NC">NC - North Carolina</option>
+		<option value="ND">ND - North Dakota</option>
+		<option value="OH">OH - Ohio</option>
+		<option value="OK">OK - Oklahoma</option>
+		<option value="OR">OR - Oregon</option>
+		<option value="PA">PA - Pennsylvania</option>
+		<option value="RI">RI - Rhode Island</option>
+		<option value="SC">SC - South Carolina</option>
+		<option value="SD">SD - South Dakota</option>
+		<option value="TN">TN - Tennessee</option>
+		<option value="TX">TX - Texas</option>
+		<option value="UT">UT - Utah</option>
+		<option value="VT">VT - Vermont</option>
+		<option value="VA">VA - Virginia</option>
+		<option value="WA">WA - Washington</option>
+		<option value="WV">WV - West Virginia</option>
+		<option value="WI">WI - Wisconsin</option>
+		<option value="WY">WY - Wyoming</option>
+	</select>
+	<br><br><label for="zipCode"> Zip/Postalcode:  </label><br> <input type="text" name="zip/postalcode" id="zipCode" placeholder="Zip/ Postal Code"><i>*</i>
+	<br><br><label for="phoneNumber"> Phone Number:  </label><br><input type="text" name="phonenumber" id="phoneNumber" placeholder="Phone Number"><i>*</i>
+	<br><br><label for="emailAddress"> Email Address:  </label><br><input type="text" name="Email address" id="emailAddress" placeholder="Email"><i>*</i>
+	<br><br><input type="submit" value="Send"><br><br>
+	</form>
+	<br><a href="http://www.acsu.buffalo.edu/~saiakhil/index.html">Home</a>
+	</div>
+
+
+
+<script type="text/javascript">
+
+function bgChange(color){
+		document.body.style.backgroundColor = color;
+			
+		}
+		
+		function textChange(color){
+		document.body.style.color = color;
+			
+		}
+		
+		function validation(){
+			var firstName = document.getElementById("firstName");
+			var lastName = document.getElementById("lastName");
+			var address = document.getElementById("address");
+			var city = document.getElementById("city");
+			var state = document.getElementById("stateSelect");
+			var zipCode = document.getElementById("zipCode");
+			var phoneNum = document.getElementById("phoneNumber");
+			var email = document.getElementById("emailAddress");
+			var invalidSymbol = /[\~\`\!\#\$\%\^\&\*\(\)\-\=\_\+\{\}\[\]\|\:\\\;\"\'\,\<\>\/\?]/;
+			
+			if(firstName.value == ""){
+				alert("Please enter your first name.");
+				firstName.focus();
+				return false;
+			}else if (lastName.value == ""){
+				alert("Please enter your last name.");
+				lastName.focus();
+				return false;
+			}else if (zipCode.value == "" || zipCode.value.length <5 || zipCode.value.length >5 && zipCode.value.length<9 || zipCode.value.length>9 || isNaN(zipCode.value)){
+				alert("Please enter a valid 5 or 9 digit zip code.");
+				zipCode.focus();
+				return false;
+			}else if (nan(phoneNum.value) ){
+				alert("Please enter a valid 10-digit phone number.");
+				phoneNum.focus();
+				return false;
+			}else if (email.value == "" || email.value.indexOf("@")<1 || email.value.lastIndexOf(".")<email.value.indexOf("@")+2 || email.value.lastIndexOf(".")+2>=email.value.indexOf("@").length || email.value.match(invalidSymbol)){
+				alert("Please enter a valid email address.");
+				email.focus();
+				return false;
+			}else{
+				return true;
+			}
+		}
+		
+		function nan(phnum){
+    var re = /^[(]{0,1}[0-9]{3}[)]{0,1}[-\s\.]{0,1}[0-9]{3}[-\s\.]{0,1}[0-9]{4}$/;
+    return !(re.test(phnum));
+}
+</script>
+</body>
+
+</html>
+	

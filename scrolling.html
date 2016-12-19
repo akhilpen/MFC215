@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+    <head>
+    <title> Scrolling Page </title>
+        <script>
+
+            tt=setTimeout("",100);
+            /*function button click, whether right or left according to the parameter*/
+            function scrolling(LR){
+                txt=document.frmText.txtshow.value;
+                    document.frmText.txtshow.value=
+                            txt.substring(txt.length-1,txt.length)+
+                            txt.substring(0,txt.length-1);
+                tt=setTimeout("scrolling('"+LR+"')",100);
+            }
+
+        </script>
+        <style>
+.scrolling {
+  margin-left: 38%;
+   margin-top: 10%;
+   font-size: 25px;
+}
+a{
+ color: #42cbf4;  
+
+}
+h1{
+color: #ffffff;
+}
+p{
+ font-size: 30px;
+margin-left: 44%;
+}
+body{
+background-color: black;
+}
+</style>
+    </head>
+    
+    <title> Scrolling text </title>
+
+    <body onload="scrolling('R')">
+        
+        <h1> Scrolling Page </h1>
+        <form name=frmText>
+            <input class = "scrolling" name=txtshow value=" State University of New York at Buffalo ">
+        </form>
+        <p><a href = "multimedia.html"> Back </a><br><a href = "index.html"> Home </a></p>
+    </body>
+</html>

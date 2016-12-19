@@ -1,0 +1,99 @@
+
+<!DOCtype html>
+<html lang="en">
+<head>
+<style>
+p {
+
+font-family: "Times New Roman", Georgia, serif;
+  color: #C23030;
+  font-size: 30px;
+}
+
+body {
+background-color: #99cc00;
+    height: 200px;
+    width: 400px;
+    font: verdana;
+    position: fixed;
+    top: 15%;
+    left: 40%;    
+}
+ i {											
+			font-weight: bold;
+			color: red;
+		} 
+
+</style>
+<title> Form Page </title>
+
+<body>
+<p>Enter Your Details Below <p>
+<form  method="post" action="mailto:saiakhil@buffalo.edu" onsubmit="return validation()">
+
+	<label for="firstName">First Name:  </label><br> <input type="text"  id="firstName" name="firstname" placeholder="First Name">
+	<br><br><label for="lastName">Last Name:  </label><br><input type="text" id="lastName" name="lastname" placeholder="Last Name">
+	<br><br><label for="address">Address:  </label><br> <input type="text" id="address" name="address" placeholder="Address">
+	<br><br><label for="city">City:  </label><br><input type="text" id="city" name="city" placeholder="City">
+	<br><br><label for="stateSelect">State:  </label><br><select name="state" id="stateSelect"">
+	<option >select state</option>
+		<option value="AL">AL-Alabama</option>
+		<option value="AK">AK - Alaska</option>
+		<option value="AZ">AZ - Arizona</option>
+		<option value="AR">AR - Arkansas</option>
+		<option value="CA">CA - California</option>
+		<option value="CO">CO - Colorado</option>
+		<option value="CT">CT - Connecticut</option>
+		<option value="DE">DE - Delaware</option>
+		<option value="DC">DC - District of Columbia</option>
+		<option value="FL">FL - Florida</option>
+		<option value="GA">GA - Georgia</option>
+		<option value="HI">HI - Hawaii</option>
+		<option value="ID">ID - Idaho</option>
+		<option value="IL">IL - Illinois</option>
+		<option value="IN">IN - Indiana</option>
+		<option value="IA">IA - Iowa</option>
+		<option value="KS">KS - Kansas</option>
+		<option value="KY">KY - Kentucky</option>
+		<option value="LA">LA - Louisiana</option>
+		<option value="ME">ME - Maine</option>
+		<option value="MD">MD - Maryland</option>
+		<option value="MA">MA - Massachusetts</option>
+		<option value="MI">MI - Michigan</option>
+		<option value="MN">MN - Minnesota</option>
+		<option value="MS">MS - Mississippi</option>
+		<option value="MO">MO - Missouri</option>
+		<option value="MT">MT - Montana</option>
+		<option value="NE">NE - Nebraska</option>
+		<option value="NV">NV - Nevada</option>
+		<option value="NH">NH - New Hampshire</option>
+		<option value="NJ">NJ - New Jersey</option>
+		<option value="NM">NM - New Mexico</option>
+		<option value="NY">NY - New York</option>
+		<option value="NC">NC - North Carolina</option>
+		<option value="ND">ND - North Dakota</option>
+		<option value="OH">OH - Ohio</option>
+		<option value="OK">OK - Oklahoma</option>
+		<option value="OR">OR - Oregon</option>
+		<option value="PA">PA - Pennsylvania</option>
+		<option value="RI">RI - Rhode Island</option>
+		<option value="SC">SC - South Carolina</option>
+		<option value="SD">SD - South Dakota</option>
+		<option value="TN">TN - Tennessee</option>
+		<option value="TX">TX - Texas</option>
+		<option value="UT">UT - Utah</option>
+		<option value="VT">VT - Vermont</option>
+		<option value="VA">VA - Virginia</option>
+		<option value="WA">WA - Washington</option>
+		<option value="WV">WV - West Virginia</option>
+		<option value="WI">WI - Wisconsin</option>
+		<option value="WY">WY - Wyoming</option>
+	</select>
+	<br><br><label for="zipCode"> Zip/Postalcode:  </label><br> <input type="text" name="zip/postalcode" id="zipCode" placeholder="Zip/ Postal Code">
+	<br><br><label for="phoneNumber"> Phone Number:  </label><br><input type="text" name="phonenumber" id="phoneNumber" placeholder="Phone Number">
+	<br><br><label for="emailAddress"> Email Address:  </label><br><input type="text" name="Email address" id="emailAddress" placeholder="Email">
+	<br><br><input type="submit" value="Send"><br><br>
+	</form>
+<br><a href="http://www.acsu.buffalo.edu/~saiakhil/index.html">Home</a>
+</body>
+	
